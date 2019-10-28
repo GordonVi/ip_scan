@@ -19,7 +19,7 @@
 .NOTES
   Version:        1.0
   Author:         Gordon Virasawmi
-  GitHub:		  https://github.com/midi002
+  GitHub:	  https://github.com/GordonVi
   Creation Date:  10/25/2019 @ 6:56pm
   Purpose/Change: Initial script development
   License:		  Free for all. Too simple to charge for. Too important to not publish.
