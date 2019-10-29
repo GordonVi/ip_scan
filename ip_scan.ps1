@@ -17,9 +17,9 @@
   Text to Powershell Console
   
 .NOTES
-  Version:        1.0
+  Version:        1.01
   Author:         Gordon Virasawmi
-  GitHub:	  https://github.com/GordonVi
+  GitHub:		  https://github.com/midi002
   Creation Date:  10/25/2019 @ 6:56pm
   Purpose/Change: Initial script development
   License:		  Free for all. Too simple to charge for. Too important to not publish.
@@ -33,12 +33,10 @@
 
 $threads = 1000 # how many simultanious threads. I've tested up to 1000 ok against ~3600 local IPs, ~900 active.
 
-$list = @()
-
-for ($a=1; $a -le 255; $a++) # set the last octlet range
-	{
-		$list += "10.0.0.$a" # set the first 3 octlets.
-	}
+$list = for ($a=1; $a -le 255; $a++) # set the last octlet range
+			{
+				"10.0.0.$a" # set the first 3 octlets.
+			}
 
 # --------------------------------------------------
 	
@@ -73,7 +71,8 @@ $scriptblock = {
 	if ($ping -eq "true") {
 	
 							$DNS=([System.Net.Dns]::GetHostByAddress($ip)).Hostname
-							$mac=$($(arp -a $ip)[3]).Split(" ",[System.StringSplitOptions]::RemoveEmptyEntries)[1]
+							#$mac=$($(arp -a $ip)[3]).Split(" ",[System.StringSplitOptions]::RemoveEmptyEntries)[1]
+							$mac=$(get-netneighbor -ipaddress $ip).LinkLayerAddress
 							
 							} else {
 
