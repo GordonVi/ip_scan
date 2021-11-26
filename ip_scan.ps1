@@ -48,7 +48,7 @@ $threads
 "    Build Pool: "
 "    Drain Pool: "
 " ---------------------"
-write-host "   Total Hosts: "
+write-host "   Total Hosts: $($list.count)"
 write-host "   Alive Hosts: "
 write-host "    Dead Hosts: "
 
