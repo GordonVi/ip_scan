@@ -19,13 +19,13 @@
 .NOTES
   Version:        1.01
   Author:         Gordon Virasawmi
-  GitHub:		  https://github.com/GordonVi
-  Creation Date:  10/25/2019 @ 6:56pm
-  Purpose/Change: Initial script development
-  License:		  Free for all. Too simple to charge for. Too important to not publish.
+  GitHub:         https://github.com/GordonVi
+  Creation Date:  9/23/2022 @ 10:08am
+  Purpose/Change: Added JSON Logging
+  License:        Free for all. Too simple to charge for. Too important to not publish.
   
 .EXAMPLE
-  .\ip_scan.ps1
+  .\ip_scan_JSON.ps1
   
 #>
 
@@ -37,24 +37,7 @@ $threads = 1000 # how many simultanious threads. I've tested up to 1000 ok again
 
 $list = for ($a=1; $a -le 254; $a++) # set the last octlet range
 			{
-					 "10.186.1.$a" # 
-					"10.186.30.$a" # Desktops
-					"10.186.20.$a" # 
-					"10.186.25.$a" # 
-					"10.186.35.$a" # 
-					"10.186.36.$a" # 
-					"10.186.40.$a" # 
-					"10.186.50.$a" # Printers
-					"10.186.60.$a" # 
-
-					 "111.1.10.$a" # 
-					 "111.1.20.$a" # 
-					 "111.1.30.$a" # 
-					 "111.1.40.$a" # 
-					 "111.1.50.$a" # 
-					 "111.1.60.$a" # 
-					 "111.1.70.$a" # 
-					 "111.1.71.$a" # 
+					 "192.168.1.$a" # 
 			}
 
 # --------------------------------------------------
@@ -102,10 +85,10 @@ $scriptblock = {
     # return whatever you want, or don't.
     return [pscustomobject][ordered]@{
 								ip 		= $ip
-								ping 	= $ping
+								ping	= $ping
 								DNS		= $DNS
 								MAC		= $mac
-							} 
+							}
 }
 
 # --------------------------------------------------
