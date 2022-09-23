@@ -12,12 +12,13 @@
   None
   
 .OUTPUTS
-  Text to Powershell Console
+  Text to CLI console out
+  Text to a TimeStamp.JSON file
   
 .NOTES
-  Version:        1.01
+  Version:        1.02
   Author:         Gordon Virasawmi
-  GitHub:         https://github.com/GordonVi
+  GitHub:         https://github.com/GordonVi/ip_scan/
   Creation Date:  9/23/2022 @ 10:08am
   Purpose/Change: Added JSON Logging
   License:        Free for all. Too simple to charge for. Too important to not publish.
