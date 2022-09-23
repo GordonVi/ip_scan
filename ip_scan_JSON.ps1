@@ -38,7 +38,8 @@ $threads = 1000 # how many simultanious threads. I've tested up to 1000 ok again
 
 $list = for ($a=1; $a -le 254; $a++) # set the last octlet range
 			{
-					 "192.168.1.$a" # 
+					 "192.168.1.$a" # First 3 octlets, then $a for range from the FOR loop 
+					 "192.168.2.$a" # Manually add subnets, or create a $b to scan more.
 			}
 
 # --------------------------------------------------
