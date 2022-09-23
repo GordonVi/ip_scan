@@ -1,5 +1,3 @@
-# Works Cited: Runspaces Simplified - https://blog.netnerds.net/2016/12/runspaces-simplified/
-
 <#
 .SYNOPSIS
   Scan an IP range and report how many IPs are alive.
@@ -23,9 +21,11 @@
   Creation Date:  9/23/2022 @ 10:08am
   Purpose/Change: Added JSON Logging
   License:        Free for all. Too simple to charge for. Too important to not publish.
+  Works Cited:    Runspaces Simplified - https://blog.netnerds.net/2016/12/runspaces-simplified/
   
 .EXAMPLE
   .\ip_scan_JSON.ps1
+     (Type this in the Powershell CLI or Right Click and Run from Windows GUI)
   
 #>
 
