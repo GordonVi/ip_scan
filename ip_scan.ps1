@@ -1,5 +1,3 @@
-# Works Cited: Runspaces Simplified - https://blog.netnerds.net/2016/12/runspaces-simplified/
-
 <#
 .SYNOPSIS
   Scan an IP range and report how many IPs are alive.
@@ -17,13 +15,16 @@
   Text to Powershell Console
   
 .NOTES
-  Version:        1.01
-  Author:         Gordon Virasawmi
-  GitHub:		  https://github.com/GordonVi
-  Creation Date:  10/25/2019 @ 6:56pm
+
+         Version: 1.01
+          Author: Gordon Virasawmi
+          GitHub: https://github.com/GordonVi
+   Creation Date: 10/25/2019 @ 6:56pm
   Purpose/Change: Initial script development
-  License:		  Free for all. Too simple to charge for. Too important to not publish.
-  
+         License: Free for all. Too simple to charge for. Too important to not publish.
+     Works Cited: Runspaces Simplified - https://blog.netnerds.net/2016/12/runspaces-simplified/
+
+
 .EXAMPLE
   .\ip_scan.ps1
   
